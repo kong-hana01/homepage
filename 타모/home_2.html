@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang='ko'>
+    <head></head>
+    <body>
+        <style>
+            <!-- div{
+                background:pink;
+                padding:10px; /*div > span인 요소만 padding 적용하기 때문에 크기 맞춰줌*/
+            } -->
+            div > span:first-child{
+                background:red;
+                padding-right:20px;
+            }
+            div > span:last-child{
+                background:red;
+                padding-top:20px;
+                padding-left:15px;
+            }
+            div > span{
+                background: greenyellow;
+                padding:10px;/*백그라운드 영역 확장*/
+                margin:40px;/*각 개체 간의 간격을 떨어트림*/
+            }
+            table{
+                border-bottom:1px solid black;
+                border-right: 1px solid black;
+                border-collapse:collapse;
+            }
+            table > tbody > tr > td{
+                border:1px solid gray;
+                background:pink;
+            }
+            table > thead > tr > th{
+                border:1px solid gray;
+            }
+
+            *{
+                border-collapse: collapse;
+                margin:0px;
+                padding:0px;
+                text-decoration: none;
+                color: black;
+                list-style: none; /*목록 왼쪽의 점 없애기*/
+            }
+
+            .blackPosition{
+                width:100%;
+                background:gray;
+                height:300px;
+            }
+            .relativePosition{
+                width:100%;
+                background:red;
+                height:200px;
+            }
+            .relativePosition > div{
+                padding:50px;
+                background: pink;
+                margin-top:10px;
+            }
+            .relativePosition > div:first-child{
+                position: relative;
+                top:-100px; /*현재 위치를 기준으로 바뀜*/
+            }
+            .absolutePosition{
+                width:100%;
+                background:blue;
+                height:500px;
+                position: absolute;
+                bottom:0px;
+                left:0px;
+            }
+            .fixedPosition{
+                width:100%;
+                background:skyblue;
+                height:400px;
+                position:fixed;
+                top:0px;
+                left:0px;
+            }
+
+        
+        </style>
+        <!-- <div>
+            <span>타모</span>
+            <span>디자인</span>
+            <span>입니다.</span>
+        </div> -->
+        <table>
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>성별</th>
+                    <th>나이</th>
+                    <th>키</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>김타모</td>
+                    <td>남자</td>
+                    <td>25</td>
+                    <td>160</td>
+                </tr>
+                <tr>
+                    <td>아로니아</td>
+                    <td>남자</td>
+                    <td>29</td>
+                    <td>187</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class='blackPosition'>
+            <div>blank</div>
+        </div>
+        <div class='relativePosition'>
+            <div>relative</div>
+            <div>relative</div>
+        </div>
+        <div class='absolutePosition'>
+            <div>absolute</div>
+        </div>
+        <div class='fixedPosition'>
+            <div>fix</div>
+        </div>
+
+        <div>
+            <span>
+            </span>
+        </div>
+    </body>
+</html>
